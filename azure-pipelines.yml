@@ -13,7 +13,6 @@ variables:
   solution: 'demo/demo.sln'
   buildPlatform: 'win32'
   buildConfiguration: 'Release'
-  BinariesDirectory: 'demo/Release'
   
 steps:
 - task: NuGetToolInstaller@1
@@ -31,7 +30,7 @@ steps:
     msbuildArchitecture: 'x86'
 
 - task: ArchiveFiles@1
-    rootFolderOrFile: '$(BinariesDirectory)'
+    rootFolderOrFile: 'demo/Release'
     includeRootFolder: true
     archiveType: 'zip'
     archiveFile: 'BugtrapDemo.zip'
