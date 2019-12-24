@@ -29,7 +29,7 @@ steps:
     vsVersion: '14.0'
     msbuildArchitecture: 'x86'
 
-- task: ArchiveFiles@2
+- task: ArchiveFiles@3
   inputs:
     rootFolderOrFile: 'demo/Release/'
     includeRootFolder: true
@@ -37,10 +37,7 @@ steps:
     archiveFile: 'BugtrapDemo.zip'
     replaceExistingArchive: true 
   
-- publish: 'BugtrapDemo.zip'
-  artifact: 'BugtrapDemo'
-  
-– task: GitHubRelease@3
+– task: GitHubRelease@4
   inputs:
      gitHubConnection: 'sbd021'
      repositoryName: 'BugtrapDemo'
