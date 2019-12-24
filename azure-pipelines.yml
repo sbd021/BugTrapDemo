@@ -28,8 +28,8 @@ steps:
     configuration: '$(buildConfiguration)'
     vsVersion: '15.0'
     msbuildArchitecture: 'x86'
-
-- publish:'BugtrapDemo.zip'
-  artifact:'BugtrapDemo'
+    
+- publish: 'BugtrapDemo.zip'
+  artifact: 'BugtrapDemo'
   
    
