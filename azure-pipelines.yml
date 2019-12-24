@@ -29,7 +29,7 @@ steps:
     vsVersion: '15.0'
     msbuildArchitecture: 'x86'
 
-- task: ArchiveFiles@1
+- task: ArchiveFiles@2
     rootFolderOrFile: 'demo/Release'
     includeRootFolder: true
     archiveType: 'zip'
