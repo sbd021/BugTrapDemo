@@ -28,7 +28,13 @@ steps:
     configuration: '$(buildConfiguration)'
     vsVersion: '15.0'
     msbuildArchitecture: 'x86'
-    
+
+- task: ArchiveFiles@1
+  rootFolderOrFile: '$(Build.BinariesDirectory)'
+  includeRootFolder: true
+  archiveType: 'zip'
+  archiveFile: 'BugtrapDemo.zip'
+  replaceExistingArchive: true 
 - publish: 'BugtrapDemo.zip'
   artifact: 'BugtrapDemo'
   
