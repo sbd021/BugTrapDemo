@@ -46,5 +46,5 @@ steps:
   repositoryName: zenithworks/BugtrapDemo
   action: edit
   tag: $(draftReleaseTag)
-  assets: $(Build.ArtifactStagingDirectory)/distributableBinaries/
+  assets: $(Build.ArtifactStagingDirectory)/distributableBinaries/*
    
