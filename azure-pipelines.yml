@@ -40,4 +40,11 @@ steps:
 - publish: 'BugtrapDemo.zip'
   artifact: 'BugtrapDemo'
   
+– task: GitHubRelease@3
+  displayName: "BugtrapDemo.zip"
+  inputs: gitHubConnection: sbd021
+  repositoryName: zenithworks/BugtrapDemo
+  action: edit
+  tag: $(draftReleaseTag)
+  assets: $(Build.ArtifactStagingDirectory)/distributableBinaries/
    
