@@ -11,7 +11,7 @@ pool:
 
 variables:
   solution: 'demo/demo.sln'
-  buildPlatform: 'x86'
+  buildPlatform: 'win32'
   buildConfiguration: 'Release'
 
 steps:
