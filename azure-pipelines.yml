@@ -26,8 +26,10 @@ steps:
     solution: '$(solution)'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+    vsVersion: '15.0'
+    msbuildArchitecture: 'x86'
 
-- task: VSTest@2
-  inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+- publish:'BugtrapDemo.zip'
+  artifact:'BugtrapDemo'
+  
+   
