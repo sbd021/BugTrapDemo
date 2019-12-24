@@ -30,7 +30,7 @@ steps:
     msbuildArchitecture: 'x86'
 
 - task: ArchiveFiles@2
-    rootFolderOrFile: 'demo/Release'
+    rootFolderOrFile: '$(Build.BinariesDirectory)'
     includeRootFolder: true
     archiveType: 'zip'
     archiveFile: 'BugtrapDemo.zip'
