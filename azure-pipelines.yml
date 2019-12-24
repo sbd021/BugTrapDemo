@@ -26,7 +26,7 @@ steps:
     solution: '$(solution)'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
-    vsVersion: '15.0'
+    vsVersion: '14.0'
     msbuildArchitecture: 'x86'
 
 - task: ArchiveFiles@2
