@@ -30,11 +30,12 @@ steps:
     msbuildArchitecture: 'x86'
 
 - task: ArchiveFiles@2
-    rootFolderOrFile: '$(Build.BinariesDirectory)'
-    includeRootFolder: true
-    archiveType: 'zip'
-    archiveFile: 'BugtrapDemo.zip'
-    replaceExistingArchive: true 
+  rootFolderOrFile: '$(Build.BinariesDirectory)'
+  includeRootFolder: true
+  archiveType: 'zip'
+  archiveFile: 'BugtrapDemo.zip'
+  replaceExistingArchive: true 
+  
 - publish: 'BugtrapDemo.zip'
   artifact: 'BugtrapDemo'
   
