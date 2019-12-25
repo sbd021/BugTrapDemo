@@ -35,5 +35,9 @@ steps:
     includeRootFolder: true
     archiveType: 'zip'
     archiveFile: Release.zip
-    replaceExistingArchive: false 
+    replaceExistingArchive: false
+
+- publish: Release.zip
+  artifact: BugtrapDemo
+
   
