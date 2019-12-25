@@ -34,12 +34,8 @@ steps:
     rootFolderOrFile: 'demo/Release/'
     includeRootFolder: true
     archiveType: 'zip'
-    archiveFile: 'BugtrapDemo.zip'
-    replaceExistingArchive: true 
+    archiveFile: Release.zip
+    replaceExistingArchive: false 
   
-– task: GitHubRelease@4
-  inputs:
-     gitHubConnection: 'sbd021'
-     repositoryName: 'BugtrapDemo'
-     assets: '$(Build.ArtifactStagingDirectory)/*'
-   
+ - publish: demo/
+   artifact: BugtrapDemo
