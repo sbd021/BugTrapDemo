@@ -37,5 +37,5 @@ steps:
     archiveFile: Release.zip
     replaceExistingArchive: false 
   
- - publish: demo/Release.zip
+ - publish: Release.zip
    artifact: BugtrapDemo
