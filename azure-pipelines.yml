@@ -13,8 +13,7 @@ variables:
   solution: 'demo/demo.sln'
   buildPlatform: 'win32'
   buildConfiguration: 'Release'
-  
-steps:
+
 -task: DownloadGitHubRelease@0
   inputs:
     connection: azureSubscription 
