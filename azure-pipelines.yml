@@ -14,7 +14,7 @@ variables:
   buildPlatform: 'win32'
   buildConfiguration: 'Release'
 
-- task: DownloadGitHubRelease@0
+- task: DownloadGithubRelease@0
   inputs:
     connection: azureSubscription
     userRepository: Advanced-Interactive-Broadcasting-1
