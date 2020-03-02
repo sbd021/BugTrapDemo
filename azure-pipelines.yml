@@ -18,7 +18,7 @@ steps:
 
 - task: DownloadGitHubRelease@0
   inputs:
-    connection: azureSubscription
+    connection: sbd021
     userRepository: BugTrapDemo
     defaultVersionType: AgoraSDK_2.9.3
     version: sdk.zip 
