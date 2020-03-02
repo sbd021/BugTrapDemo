@@ -17,10 +17,10 @@ variables:
 steps:
 -task: DownloadGitHubRelease@0
   inputs:
-		  connection: azureSubscription 
-				userRepository: Advanced-Interactive-Broadcasting-1
-				defaultVersionType: AgoraSDK_2.9.3
-				version: sdk.zip
+    connection: azureSubscription 
+    userRepository: Advanced-Interactive-Broadcasting-1
+    defaultVersionType: AgoraSDK_2.9.3
+    version: sdk.zip
         
 - task: NuGetToolInstaller@1
 
