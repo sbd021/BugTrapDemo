@@ -20,31 +20,4 @@ steps:
     connection: azureSubscription 
     userRepository: Advanced-Interactive-Broadcasting-1
     defaultVersionType: AgoraSDK_2.9.3
-    version: sdk.zip
-        
-- task: NuGetToolInstaller@1
-
-- task: NuGetCommand@2
-  inputs:
-    restoreSolution: '$(solution)'
-
-- task: VSBuild@1
-  inputs:
-    solution: '$(solution)'
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
-    vsVersion: '14.0'
-    msbuildArchitecture: 'x86'
-
-- task: ArchiveFiles@2
-  inputs:
-    rootFolderOrFile: 'demo/Release/'
-    includeRootFolder: true
-    archiveType: 'zip'
-    archiveFile: Release.zip
-    replaceExistingArchive: false
-
-- publish: Release.zip
-  artifact: BugtrapDemo
-
-  
+    version: sdk.zip 
