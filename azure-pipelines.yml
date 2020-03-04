@@ -23,7 +23,7 @@ steps:
     destinationFolder: 'AgoraSDK'
 - task: CopyFiles@2
   inputs:
-    sourceFolder: 'AgoraSDK/sdk'
+    sourceFolder: 'AgoraSDK/sdk/'
     targetFolder: 'demo/'
     
 - task: VSBuild@1
