@@ -22,7 +22,7 @@ steps:
     archiveFilePatterns: 'AgoraSDK.zip' 
     destinationFolder: 'sdk'
    
-- task: VSBuild@2
+- task: VSBuild@1
   inputs:
     solution: '$(solution)'
     platform: '$(buildPlatform)'
@@ -30,7 +30,7 @@ steps:
     vsVersion: '14.0'
     msbuildArchitecture: 'x86'
    
-- task: ArchiveFiles@3
+- task: ArchiveFiles@2
   inputs:
     rootFolderOrFile: 'demo/Release/'
     includeRootFolder: true
