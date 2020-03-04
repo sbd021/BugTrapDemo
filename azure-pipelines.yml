@@ -19,7 +19,7 @@ steps:
    
 - task: ExtractFiles@1
   inputs:
-    archiveFilePatterns: './AgoraSDK.zip' 
+    archiveFilePatterns: 'AgoraSDK.zip' 
     destinationFolder: 'sdk'
    
 - task: VSBuild@2
