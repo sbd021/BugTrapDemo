@@ -16,11 +16,6 @@ variables:
 
 steps:
 
-- task: PowerShell@0
-  inputs:
-    targetType: 'filePath'
-    filePath: pre_build_event.ps1
-  
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
