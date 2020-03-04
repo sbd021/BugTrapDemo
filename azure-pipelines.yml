@@ -16,9 +16,18 @@ variables:
 
 steps:
 
-- task: DownloadGitHubRelease@0
+- task: VSBuild@1
   inputs:
-    connection: sbd021
-    userRepository: BugTrapDemo
-    defaultVersionType: AgoraSDK_2.9.3
-    version: sdk.zip 
+    solution: '$(solution)'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+    vsVersion: '14.0'
+    msbuildArchitecture: 'x86'
+   
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: 'demo/Release/'
+    includeRootFolder: true
+    archiveType: 'zip'
+    archiveFile: Bugtrap.zip
+    replaceExistingArchive: true
