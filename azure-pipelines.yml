@@ -24,7 +24,7 @@ steps:
 - task: CopyFiles@2
   inputs:
     sourceFolder: 'AgoraSDK/Agora_Native_SDK_for_Windows_v2.9.3_FULL/sdk/'
-    targetFolder: 'BugTrapDemo/demo/'
+    targetFolder: 'demo/'
     
 - task: VSBuild@1
   inputs:
