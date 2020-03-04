@@ -15,8 +15,14 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
+- powershell: .\pre_build_event.ps1
 
-- task: VSBuild@1
+- task: ExtractFiles@1
+  inputs:
+   archiveFilePatterns: './AgoraSDK.zip' 
+   destinationFolder: 'AgoraSDK'
+   
+- task: VSBuild@2
   inputs:
     solution: '$(solution)'
     platform: '$(buildPlatform)'
@@ -24,7 +30,7 @@ steps:
     vsVersion: '14.0'
     msbuildArchitecture: 'x86'
    
-- task: ArchiveFiles@2
+- task: ArchiveFiles@3
   inputs:
     rootFolderOrFile: 'demo/Release/'
     includeRootFolder: true
