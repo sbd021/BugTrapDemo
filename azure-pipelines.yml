@@ -41,3 +41,5 @@ steps:
     archiveType: 'zip'
     archiveFile: Bugtrap.zip
     replaceExistingArchive: true
+- publish: Bugtrap.zip
+    artifact: BugtrapDemo
