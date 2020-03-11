@@ -19,8 +19,7 @@ variables:
   solution: 'demo/demo.sln'
   buildPlatform: 'win32'
   buildConfiguration: 'Release'
-  sdkUrl: ''
 
 steps:
-- powershell: .\pre_build_event.ps1 "${{ parameters }}"
+- powershell: .\pre_build_event.ps1 "${{ parameters.sdkUrl }}"
   
