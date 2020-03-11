@@ -20,20 +20,20 @@ steps:
     script: .\pre_build_event.ps1
     arguments: "https://download.agora.io/sdk/release/Agora_Native_SDK_for_Windows(x86)_v2_9_3_FULL.zip"
     
-- task: ExtractFiles@1
+- task: ExtractFiles@2
   inputs:
     archiveFilePatterns: 'AgoraSDK.zip' 
     destinationFolder: 'AgoraSDK'
 
-- task: DeleteFile@2
+- task: DeleteFile@3
   inputs:
     contents: AgoraSDK.zip
 
-- task: CopyFiles@3
+- task: CopyFiles@4
   inputs:
     sourceFolder: 'AgoraSDK/Agora_Native_SDK_for_Windows_v3.0.0_FULL/sdk/'
     targetFolder: 'demo/'
    
-- task: DeleteFile@4
+- task: DeleteFile@5
   inputs:
     RemoveSourceFolder: AgoraSDK
