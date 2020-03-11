@@ -6,12 +6,6 @@
 trigger:
 - master
 
-parameters:
-  displayName: ''
-  workingDirectory: ''
-  scheme: ''
-  sdkurl: 'https://download.agora.io/sdk/release/Agora_Native_SDK_for_Windows(x86)_v2_9_3_FULL.zip'
-
 pool:
   vmImage: 'vs2015-win2012r2'
 
@@ -19,7 +13,8 @@ variables:
   solution: 'demo/demo.sln'
   buildPlatform: 'win32'
   buildConfiguration: 'Release'
-
+  sdkurl: 'https://download.agora.io/sdk/release/Agora_Native_SDK_for_Windows(x86)_v2_9_3_FULL.zip'
+    
 steps:
-- powershell: .\pre_build_event.ps1 "${{ parameters.sdkUrl }}"
+- powershell: .\pre_build_event.ps1 "$(sdkUrl)"
   
