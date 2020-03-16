@@ -27,7 +27,6 @@ steps:
     sourceFolder: 'AgoraSDK/Agora_Native_SDK_for_Windows_v2.9.3_FULL/sdk/'
     targetFolder: 'demo/sdk'
 
-
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
