@@ -17,7 +17,12 @@ variables:
     
 steps:
 - powershell: .\pre_build_event.ps1 "$(sdkUrl)"
-  
+- task: DownloadGitHubRelease@0
+  inputs: 
+    connection: sbd021
+    userRepository: sbd021/BugTrapDemo
+    defaultVersionType: 'latest'
+    itemPattern: '*AgoraHookSDK.zip*'        
 - task: ExtractFiles@1
   inputs:
     archiveFilePatterns: 'AgoraSDK.zip' 
